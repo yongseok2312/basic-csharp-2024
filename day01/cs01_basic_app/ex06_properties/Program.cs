@@ -1,26 +1,37 @@
-﻿namespace ex06_properties
+﻿using Microsoft.VisualBasic;
+
+namespace ex06_properties
 {
     class Kiturami
     {
         private int temperature;
+        private int year; //제작년도
+        public int Year { get { return year; } set => year = value; }
 
         // Rosalyn VS 개발 서포터
         public int Temperature
         {
-            get { return temperature; }
+            get { return temperature; } // 값을 리턴하기 때문에 특별한 기능이 없음
             set
             {   if (value < 10)
-                {
                     temperature = 20;
-                }
                 else if (value > 70)
-                {
+      
                     temperature = 50;
 
-                }
+             
                 else
                 { temperature = value; }
             }
+        }
+
+        public string Name { get; set; }
+
+        public Kiturami(int temperature, int year,  string name)
+        {
+            Year = year;
+            Temperature = temperature;
+            Name = name;
         }
 
         public void SetTemperature(int temp)
@@ -46,13 +57,17 @@
         static void Main(string[] args)
         {
             Console.WriteLine("보일러 시작!");
-            Kiturami boiler = new Kiturami();
-            boiler.Temperature = 400;
-            //Console.WriteLine($"보일러 온도 : {boiler.Temperature}도");
-            Console.WriteLine($"보일러 온도는 {boiler.Temperature}도");
-            
-            
-            boiler.On();
+            //Kiturami boiler = new Kiturami();
+            //boiler.Temperature = 400;
+            ////Console.WriteLine($"보일러 온도 : {boiler.Temperature}도");
+            //Console.WriteLine($"보일러 온도는 {boiler.Temperature}도");
+
+
+            //boiler.On();
+
+            Kiturami kiturami = new Kiturami(name: "라미", temperature: 25, year: 2023);
+            Console.WriteLine(kiturami.Name);
+
         }
     }
 }
