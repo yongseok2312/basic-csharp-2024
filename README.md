@@ -222,6 +222,7 @@
 
 - TIP, C# 주석 중 영역을 지정할 수 있는 주석
     - #region ~ #endregion 영역을 Expend 또는 Collapse 가능
+![cs002](https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/9e6cb96c-e3ea-406d-854e-738b85b51c85)
 
 
 ## 3일차
