@@ -38,6 +38,8 @@
             Name = "frmMain";
             Text = "frmMain";
             FormClosing += frmMain_FormClosing;
+            Load += frmMain_Load;
+            Click += frmMain_Click;
             ResumeLayout(false);
         }
 

@@ -21,5 +21,15 @@ namespace ex17_winApp
         {
 
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMain_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("휴");
+        }
     }
 }
