@@ -288,15 +288,28 @@
     - 스레드 추가
         - 프로세스를 나누어서 동시에 여러가지일 진행
         - 스레드 사용하기 불편함
-        - C# BackgroundWorker 클래스를 추가
+        - C# BackgroundWorker 클래스를 추가(Thread를 사용하기 편하게 만든 클래스)
+
     - 파일 입출력
+        - 리치텍스트박스(like MSWord, 한글워드)로 저장
+
+
     - 비동기 작업 앱
+        - 가장 트렌드가 되는 작업방법
+        - 백그라운드 처리는 Thread, BackgroundWorker와 유사
+        - async, await 키워드
+        
+
     - 윈도우 탐색기 앱 제작
     - 도서관리 앱 with SQL sever
     - ModernUI 앱
     - 국가교통정보센터 CCTV 뷰앱
     - IoT Dummy 앱 with SQL server
 
-
+## 개인 포트폴리오
+- 심플 메모장 앱
+    - 기능
+    - 특징
+    - 배운점
 - 예제 프로젝트
 - WPF

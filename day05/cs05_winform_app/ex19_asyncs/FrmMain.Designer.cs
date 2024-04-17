@@ -1,4 +1,4 @@
-﻿namespace ex19_asyncs
+namespace ex19_asyncs
 {
     partial class FrmMain
     {
@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            txtsource = new TextBox();
-            target = new TextBox();
-            btngetsource = new Button();
-            btngetsettarget = new Button();
-            btnsynccopy = new Button();
-            btnasyncopy = new Button();
-            btncancel = new Button();
             prgcopy = new ProgressBar();
+            btncancel = new Button();
+            btnasyncopy = new Button();
+            btnsynccopy = new Button();
+            btngetsettarget = new Button();
+            btngetsource = new Button();
+            target = new TextBox();
+            txtsource = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,14 +62,78 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "비동기 전송";
             // 
-            // label1
+            // prgcopy
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 36);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "소스 :";
+            prgcopy.Location = new Point(30, 148);
+            prgcopy.Name = "prgcopy";
+            prgcopy.Size = new Size(293, 23);
+            prgcopy.TabIndex = 9;
+            // 
+            // btncancel
+            // 
+            btncancel.Location = new Point(248, 100);
+            btncancel.Name = "btncancel";
+            btncancel.Size = new Size(103, 30);
+            btncancel.TabIndex = 8;
+            btncancel.Text = "취소";
+            btncancel.UseVisualStyleBackColor = true;
+            btncancel.Click += btncancel_Click;
+            // 
+            // btnasyncopy
+            // 
+            btnasyncopy.Location = new Point(127, 100);
+            btnasyncopy.Name = "btnasyncopy";
+            btnasyncopy.Size = new Size(103, 30);
+            btnasyncopy.TabIndex = 7;
+            btnasyncopy.Text = "비동기화 복사";
+            btnasyncopy.UseVisualStyleBackColor = true;
+            btnasyncopy.Click += btnasyncopy_Click;
+            // 
+            // btnsynccopy
+            // 
+            btnsynccopy.Location = new Point(6, 100);
+            btnsynccopy.Name = "btnsynccopy";
+            btnsynccopy.Size = new Size(103, 30);
+            btnsynccopy.TabIndex = 6;
+            btnsynccopy.Text = "동기화 복사";
+            btnsynccopy.UseVisualStyleBackColor = true;
+            btnsynccopy.Click += btnsynccopy_Click;
+            // 
+            // btngetsettarget
+            // 
+            btngetsettarget.Location = new Point(292, 66);
+            btngetsettarget.Name = "btngetsettarget";
+            btngetsettarget.Size = new Size(50, 23);
+            btngetsettarget.TabIndex = 5;
+            btngetsettarget.Text = "...";
+            btngetsettarget.UseVisualStyleBackColor = true;
+            btngetsettarget.Click += btngetsettarget_Click;
+            // 
+            // btngetsource
+            // 
+            btngetsource.Location = new Point(292, 28);
+            btngetsource.Name = "btngetsource";
+            btngetsource.Size = new Size(50, 23);
+            btngetsource.TabIndex = 4;
+            btngetsource.Text = "...";
+            btngetsource.UseVisualStyleBackColor = true;
+            btngetsource.Click += btngetsource_Click;
+            // 
+            // target
+            // 
+            target.Location = new Point(50, 66);
+            target.Name = "target";
+            target.ReadOnly = true;
+            target.Size = new Size(236, 23);
+            target.TabIndex = 3;
+            // 
+            // txtsource
+            // 
+            txtsource.Location = new Point(50, 35);
+            txtsource.Name = "txtsource";
+            txtsource.ReadOnly = true;
+            txtsource.Size = new Size(236, 23);
+            txtsource.TabIndex = 2;
             // 
             // label2
             // 
@@ -80,71 +144,14 @@
             label2.TabIndex = 1;
             label2.Text = "타겟 :";
             // 
-            // txtsource
+            // label1
             // 
-            txtsource.Location = new Point(50, 35);
-            txtsource.Name = "txtsource";
-            txtsource.Size = new Size(236, 23);
-            txtsource.TabIndex = 2;
-            // 
-            // target
-            // 
-            target.Location = new Point(50, 66);
-            target.Name = "target";
-            target.Size = new Size(236, 23);
-            target.TabIndex = 3;
-            // 
-            // btngetsource
-            // 
-            btngetsource.Location = new Point(292, 28);
-            btngetsource.Name = "btngetsource";
-            btngetsource.Size = new Size(50, 23);
-            btngetsource.TabIndex = 4;
-            btngetsource.Text = "...";
-            btngetsource.UseVisualStyleBackColor = true;
-            // 
-            // btngetsettarget
-            // 
-            btngetsettarget.Location = new Point(292, 66);
-            btngetsettarget.Name = "btngetsettarget";
-            btngetsettarget.Size = new Size(50, 23);
-            btngetsettarget.TabIndex = 5;
-            btngetsettarget.Text = "...";
-            btngetsettarget.UseVisualStyleBackColor = true;
-            // 
-            // btnsynccopy
-            // 
-            btnsynccopy.Location = new Point(6, 100);
-            btnsynccopy.Name = "btnsynccopy";
-            btnsynccopy.Size = new Size(103, 30);
-            btnsynccopy.TabIndex = 6;
-            btnsynccopy.Text = "동기화 복사";
-            btnsynccopy.UseVisualStyleBackColor = true;
-            // 
-            // btnasyncopy
-            // 
-            btnasyncopy.Location = new Point(127, 100);
-            btnasyncopy.Name = "btnasyncopy";
-            btnasyncopy.Size = new Size(103, 30);
-            btnasyncopy.TabIndex = 7;
-            btnasyncopy.Text = "비동기화 복사";
-            btnasyncopy.UseVisualStyleBackColor = true;
-            // 
-            // btncancel
-            // 
-            btncancel.Location = new Point(248, 100);
-            btncancel.Name = "btncancel";
-            btncancel.Size = new Size(103, 30);
-            btncancel.TabIndex = 8;
-            btncancel.Text = "취소";
-            btncancel.UseVisualStyleBackColor = true;
-            // 
-            // prgcopy
-            // 
-            prgcopy.Location = new Point(30, 148);
-            prgcopy.Name = "prgcopy";
-            prgcopy.Size = new Size(293, 23);
-            prgcopy.TabIndex = 9;
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 36);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 0;
+            label1.Text = "소스 :";
             // 
             // FrmMain
             // 
@@ -153,6 +160,8 @@
             ClientSize = new Size(391, 222);
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FrmMain";
             Text = "비동기 파일 복사";
             groupBox1.ResumeLayout(false);
