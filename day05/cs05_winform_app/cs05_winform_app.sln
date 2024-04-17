@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex19_asyncs", "ex19_asyncs\ex19_asyncs.csproj", "{B30CA589-CDB7-40F4-906E-2387C38DA6E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루션 항목", "{B42CDAB3-BC3C-4870-A36A-47633AB94F5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B90A2B2-D294-4472-A498-255F2A7B516C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B30CA589-CDB7-40F4-906E-2387C38DA6E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30CA589-CDB7-40F4-906E-2387C38DA6E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30CA589-CDB7-40F4-906E-2387C38DA6E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30CA589-CDB7-40F4-906E-2387C38DA6E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DFBB6EF-D489-4F65-BDDD-374FE2CBD48E}
+	EndGlobalSection
+EndGlobal
