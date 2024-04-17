@@ -292,14 +292,16 @@
 
     - 파일 입출력
         - 리치텍스트박스(like MSWord, 한글워드)로 저장
-
+![cs003](https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/325a7365-749d-4df9-b504-a07dbe6e0162)
 
     - 비동기 작업 앱
         - 가장 트렌드가 되는 작업방법
         - 백그라운드 처리는 Thread, BackgroundWorker와 유사
         - async, await 키워드
-        
+        ![cs004](https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/960a78c2-1b64-40eb-be9a-cb0ab0142251)
 
+## 6일차
+- 예제 프로젝트
     - 윈도우 탐색기 앱 제작
     - 도서관리 앱 with SQL sever
     - ModernUI 앱
