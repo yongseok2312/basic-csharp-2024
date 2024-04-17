@@ -298,6 +298,7 @@
         - 가장 트렌드가 되는 작업방법
         - 백그라운드 처리는 Thread, BackgroundWorker와 유사
         - async, await 키워드
+          
         ![cs004](https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/960a78c2-1b64-40eb-be9a-cb0ab0142251)
 
 ## 6일차
