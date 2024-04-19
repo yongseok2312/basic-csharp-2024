@@ -314,10 +314,22 @@ https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/d0dfead3-fd58
 
 
 
-    - 도서관리 앱 with SQL sever
-    - ModernUI 앱
-    - 국가교통정보센터 CCTV 뷰앱
+- 도서관리 앱 with SQL sever(BASE) ModerUI(NuGet패키지)
+```cs
+        // 값 형식 변수는 NULL
+        // 값 형식 변수에 NULL값을 넣을 수 있도록 만들어준 기능 NULLable
+        int? a = null;
+```
+- 로그인 패스워드 암호화 미구현
+
+## 8일차
+- 토이 프로젝트
+    - 도서관리 앱 종료
     - IoT Dummy 앱 with SQL server
+    - 국가교통정보센터 CCTV 뷰앱
+
+
+- ModernUI 앱
 
 ## 개인 포트폴리오
 - 심플 메모장 앱
