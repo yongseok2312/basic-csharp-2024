@@ -310,6 +310,9 @@
     - 윈도우 탐색기 앱 종료
         - 실행결과
 
+https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/d0dfead3-fd58-40d4-ab2a-80118d5dc011
+
+
 
     - 도서관리 앱 with SQL sever
     - ModernUI 앱
