@@ -337,6 +337,7 @@ https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/d0dfead3-fd58
         - 도서회원 관리
         - 대출 관리
         - 프로그램 설명
+![image](https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/eaf553df-313b-4cd1-8a3f-543805d7e5d6)
 
 
 ## 10일차
