@@ -90,7 +90,7 @@ namespace NewBookRentalShopAp
                     // 유저 아이디가 null 일때  -로 변경 
                     chkPassword = reader["password"] != null ? reader["password"].ToString() : "-";
                     // 패스워드가 null 일때 -로 변경 
-
+                    Helper.Common.LoginId = chkUserId;
                     return true;
                 }
                 else

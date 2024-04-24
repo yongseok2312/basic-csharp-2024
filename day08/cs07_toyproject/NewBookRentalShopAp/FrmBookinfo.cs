@@ -282,8 +282,12 @@ namespace NewBookRentalShopAp
             }
         }
 
-        
-        
+        private void TxtISBN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar)&& (e.KeyChar != '.')&&!char.IsControl(e.KeyChar)){
+                e.Handled = true;
+                }
+        }
     }
 
 

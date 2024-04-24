@@ -162,7 +162,7 @@
             this.TxtISBN.CustomButton.Visible = false;
             this.TxtISBN.Lines = new string[0];
             this.TxtISBN.Location = new System.Drawing.Point(109, 220);
-            this.TxtISBN.MaxLength = 32767;
+            this.TxtISBN.MaxLength = 13;
             this.TxtISBN.Name = "TxtISBN";
             this.TxtISBN.PasswordChar = '\0';
             this.TxtISBN.PromptText = "ISBN 입력";
@@ -177,6 +177,7 @@
             this.TxtISBN.WaterMark = "ISBN 입력";
             this.TxtISBN.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtISBN.WaterMarkFont = new System.Drawing.Font("나눔고딕코딩", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtISBN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtISBN_KeyPress);
             // 
             // metroLabel8
             // 

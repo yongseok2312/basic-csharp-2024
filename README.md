@@ -313,7 +313,6 @@
 https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/d0dfead3-fd58-40d4-ab2a-80118d5dc011
 
 
-
 - 도서관리 앱 with SQL sever(BASE) ModerUI(NuGet패키지)
 ```cs
         // 값 형식 변수는 NULL
@@ -324,11 +323,32 @@ https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/d0dfead3-fd58
 
 ## 8일차
 - 토이 프로젝트
-    - 도서관리 앱 종료
+    - 도서관리 앱 관리 화면
+        - 앱 사용자 관리
+
+## 9일차
+- 토이 프로젝트
+    - 도서관리 앱
+        - 기존 만들어진 폼을 복사해서 변경할 시
+            - 클래스명, 생성자,*.Designer.cs에 있는 클래스명 3군데 이름변경
+        - 공통 클래스
+        - 책 장르 관리
+        - 책 정보 관리
+        - 도서회원 관리
+        - 대출 관리
+        - 프로그램 설명
+
+
+## 10일차
+- 토이 프로젝트
+    - 도서관리 앱
+    - 대출 관리
+    - 이 프로그램은 ...       
+    
+    
+## 나머지    
     - IoT Dummy 앱 with SQL server
     - 국가교통정보센터 CCTV 뷰앱
-
-
 - ModernUI 앱
 
 ## 개인 포트폴리오

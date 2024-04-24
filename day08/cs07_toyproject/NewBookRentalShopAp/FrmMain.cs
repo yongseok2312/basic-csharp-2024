@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework;
 using MetroFramework.Forms;
 
 
@@ -17,6 +18,8 @@ namespace NewBookRentalShopAp
         private FrmLoginUser frmLoginUser = null;
         FrmBookDivision frmBookDivision = null;
         FrmBookinfo frmBookinfo = null;
+        FrmMembers frmMembers = null;
+        FrmBookRental frmBookRental = null;
 
 
         public FrmMain()
@@ -31,7 +34,9 @@ namespace NewBookRentalShopAp
             //frm.Parent = this;  // FrmMain이 부모창 설정
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.TopMost = true;  // 윈도우 화면 상단에 
-            frm.ShowDialog();   
+            frm.ShowDialog();
+
+            LblLoginId.Text = Helper.Common.LoginId;
         }
 
         private void MnuLoginUsers_Click(object sender, EventArgs e)
@@ -47,6 +52,14 @@ namespace NewBookRentalShopAp
         private void MnuBookInfo_Click(object sender, EventArgs e)
         {
             frmBookinfo = (FrmBookinfo)ShowActiveForm(frmBookinfo, typeof(FrmBookinfo));
+        }
+        private void MnuMembers_Click(object sender, EventArgs e)
+        {
+            frmMembers = ShowActiveForm(frmMembers, typeof(FrmMembers)) as FrmMembers;
+        }
+        private void MnuBookRental_Click(object sender, EventArgs e)
+        {
+            frmBookRental = ShowActiveForm(frmBookRental, typeof(FrmBookRental)) as FrmBookRental;
         }
         Form ShowActiveForm(Form form,Type type)
         {
@@ -75,5 +88,24 @@ namespace NewBookRentalShopAp
             return form;
         }
 
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var res = MetroMessageBox.Show(this,"종료하시겠습니까?","종료 여부",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (res == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        private void MnuAbout_Click(object sender, EventArgs e)
+        {
+            FrmAbout popup = new FrmAbout();
+            popup.StartPosition = FormStartPosition.CenterParent;
+            popup.ShowDialog();
+        }
     }
 }
