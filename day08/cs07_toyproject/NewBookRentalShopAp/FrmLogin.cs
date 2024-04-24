@@ -16,11 +16,6 @@ namespace NewBookRentalShopAp
     public partial class FrmLogin : MetroForm
     {
         private bool isLogin = false;
-        private string connStriong = "Data Source=localhost;" +
-                                     "Initial Catalog=BookRentalShop2024;" +
-                                     "Persist Security Info=True;" +
-                                     "User ID=sa;Encrypt=False;" +
-                                     "Password=mssql_p@ss";
 
         private bool IsLogin
         {
@@ -71,7 +66,7 @@ namespace NewBookRentalShopAp
 
             // 연결문자열(ConnectioString) 
             // Data Source=localhost;Initial Catalog=BookRentalShop2024;Persist Security Info=True;User ID=sa;Encrypt=False;Password=mssql_p@ss
-            using (SqlConnection conn = new SqlConnection(connStriong))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
                 conn.Open();
                 // @userid, @password 쿼리문 외부에서 변수값을 안전하게 주입함
@@ -83,7 +78,7 @@ namespace NewBookRentalShopAp
                 SqlCommand cmd = new SqlCommand(query, conn);
                 // @userid, @password 파라미터 할당
                 SqlParameter prmUserid = new SqlParameter("@userId", userid);
-                SqlParameter prmPassword = new SqlParameter("@Password", GetMd5Hash(md5hash, password));
+                SqlParameter prmPassword = new SqlParameter("@Password", Helper.Common.GetMd5Hash(md5hash, password));
                 cmd.Parameters.Add(prmUserid);
                 cmd.Parameters.Add(prmPassword);    
 
@@ -124,18 +119,7 @@ namespace NewBookRentalShopAp
             }
         }
 
-        string GetMd5Hash(MD5 md5hash, string input)
-        {
-            // 입력문자열을 byte배열로 변환한 뒤 MD5 해시 처리
-            byte[] data = md5hash.ComputeHash(Encoding.UTF8.GetBytes(input));
-            StringBuilder builder = new StringBuilder();
-            for (int i = 0; i < data.Length; i++)
-            {
-                builder.Append(data[i].ToString("X2")); // 16진수 문자로 각 글자를 전부 변환
-            }
-
-            return builder.ToString();
-        }
+        
     }
 
 }

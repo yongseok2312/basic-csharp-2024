@@ -15,6 +15,8 @@ namespace NewBookRentalShopAp
     public partial class FrmMain : MetroForm
     {
         private FrmLoginUser frmLoginUser = null;
+        FrmBookDivision frmBookDivision = null;
+        FrmBookinfo frmBookinfo = null;
 
 
         public FrmMain()
@@ -37,6 +39,15 @@ namespace NewBookRentalShopAp
             frmLoginUser = ShowActiveForm(frmLoginUser, typeof(FrmLoginUser)) as FrmLoginUser;
         }
 
+        // 책 장르관리 메뉴 클릭 이벤트
+        private void MnuBookDivision_Click(object sender, EventArgs e)
+        {
+            frmBookDivision = (FrmBookDivision)ShowActiveForm(frmBookDivision, typeof(FrmBookDivision));
+        }
+        private void MnuBookInfo_Click(object sender, EventArgs e)
+        {
+            frmBookinfo = (FrmBookinfo)ShowActiveForm(frmBookinfo, typeof(FrmBookinfo));
+        }
         Form ShowActiveForm(Form form,Type type)
         {
             if(form == null)// 화면이 한번도 안열었으면
@@ -63,5 +74,6 @@ namespace NewBookRentalShopAp
             }
             return form;
         }
+
     }
 }

@@ -58,11 +58,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBookinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBookinfo.Designer.cs">
+      <DependentUpon>FrmBookinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBookDivision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBookDivision.Designer.cs">
+      <DependentUpon>FrmBookDivision.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLoginUser.cs">
       <SubType>Form</SubType>
@@ -76,10 +88,17 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Common.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBookinfo.resx">
+      <DependentUpon>FrmBookinfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBookDivision.resx">
+      <DependentUpon>FrmBookDivision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoginUser.resx">
       <DependentUpon>FrmLoginUser.cs</DependentUpon>
@@ -113,7 +132,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books.ico" />
+    <Content Include="images\book.ico" />
+    <Content Include="images\book.png" />
+    <Content Include="images\books.ico" />
+    <Content Include="images\division.ico" />
+    <Content Include="images\division.png" />
+    <Content Include="images\login.ico" />
+    <Content Include="images\login.png" />
+    <Content Include="images\member.ico" />
+    <Content Include="images\member.png" />
+    <Content Include="images\rental.ico" />
+    <Content Include="images\rental.png" />
     <None Include="Resources\cs005.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,11 +17,7 @@ namespace NewBookRentalShopAp
     public partial class FrmLoginUser : MetroForm
     {
         private bool isNew = false; // UPDATE(false), INSERT(true)
-        string connString = "Data Source=localhost;" +
-                                     "Initial Catalog=BookRentalShop2024;" +
-                                     "Persist Security Info=True;" +
-                                     "User ID=sa;Encrypt=False;" +
-                                     "Password=mssql_p@ss";
+       
         public FrmLoginUser()
         {
             InitializeComponent();
@@ -79,7 +75,7 @@ namespace NewBookRentalShopAp
             }
             try
             {
-                using (SqlConnection conn = new SqlConnection(connString))
+                using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
                 {
                     conn.Open();
                     var query = "";
@@ -120,7 +116,7 @@ namespace NewBookRentalShopAp
 
                     if (result > 0)
                     {   // this 메시지박스의 부모 창이 누구냐, FrmLoginuser
-                        MetroMessageBox.Show(this, "저장 성공!", "저장", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroMessageBox.Show(this, "저장 성공!", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //MessageBox.Show("저장 성공!", "저장", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
@@ -140,7 +136,7 @@ namespace NewBookRentalShopAp
         }
         private void ReFreshData()
         {
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
                 conn.Open();
 
@@ -174,7 +170,7 @@ namespace NewBookRentalShopAp
 
             var answer = MetroMessageBox.Show(this, "정말 삭제하시겠습니까?", "삭제여부",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (answer == DialogResult.No) return;
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
                 conn.Open();
                 var query = @"DELETE FROM usertbl WHERE useridx = @useridx";
