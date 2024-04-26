@@ -359,6 +359,10 @@ https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/d0dfead3-fd58
         
 
 
+https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/b8f911ea-820c-42b3-a8e8-cc7545b774e3
+
+
+
 
 
 - 심플 메모장 앱
