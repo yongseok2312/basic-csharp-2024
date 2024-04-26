@@ -55,6 +55,7 @@
     <Compile Include="FrmOrder.Designer.cs">
       <DependentUpon>FrmOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\Common.cs" />
     <Compile Include="ListSet.cs" />
     <Compile Include="FoodCategory.cs" />
     <Compile Include="FoodTotalList.cs" />

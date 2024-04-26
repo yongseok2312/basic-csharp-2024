@@ -30,16 +30,10 @@ namespace OhShot_Pos
             
             RefreshData();
         }
-
-        public static readonly string connString = "Data Source=localhost;" +
-                                           "Initial Catalog=pos;" +
-                                           "Persist Security Info=True;" +
-                                           "User ID=sa;Encrypt=False;" +
-                                           "Password=mssql_p@ss";
                         
         private void RefreshData()
         {
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
                 try
                 {
@@ -72,7 +66,7 @@ namespace OhShot_Pos
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            Alldelete();
+           
             this.Dispose();
         }
 
@@ -89,18 +83,21 @@ namespace OhShot_Pos
         }
         #endregion
 
-        #region '품목증가' 버튼 클릭 이벤트 핸들러 
-        private void PlusBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        #endregion
 
         #region '품목제거' 버튼 클릭 이벤트 핸들러 
         private void MinusBtn_Click(object sender, EventArgs e)
         {
-
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                string menuName = selectedRow.Cells["menuName"].Value.ToString(); // 메뉴 이름 가져오기
+                DeleteMenu(menuName);
+                RefreshData();
+            }
+            else
+            {
+                MessageBox.Show("삭제할 품목을 선택해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         #endregion
 
@@ -153,7 +150,7 @@ namespace OhShot_Pos
         #region "메뉴"
         private void BtnSalmonRice_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
                 conn.Open();
                 bool isRamenExists = CheckIfMenuExists(conn, "연어덮밥");
@@ -173,7 +170,7 @@ namespace OhShot_Pos
         }
         private void BtnNuddle_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
                 conn.Open();
                 bool isRamenExists = CheckIfMenuExists(conn, "라면");
@@ -194,7 +191,7 @@ namespace OhShot_Pos
 
         private void Btncoffee_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
                 conn.Open();
                 bool isRamenExists = CheckIfMenuExists(conn, "커피");
@@ -215,7 +212,7 @@ namespace OhShot_Pos
 
         private void BtnEggRice_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
                 conn.Open();
                 bool isRamenExists = CheckIfMenuExists(conn, "계란볶음밥");
@@ -236,6 +233,7 @@ namespace OhShot_Pos
             
         }
         #endregion
+
         private int sumprice(SqlConnection conn)
         {
             int totalMenuPrice = 0;
@@ -255,7 +253,7 @@ namespace OhShot_Pos
 
         private void Alldelete()
         {
-            using (SqlConnection conn = new SqlConnection(connString))
+            using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
                 try
                 {
@@ -273,6 +271,18 @@ namespace OhShot_Pos
                 {
                     MessageBox.Show($"데이터 가져오기 오류: {ex.Message}");
                 }
+            }
+        }
+        
+        private void DeleteMenu(string menuName)
+        {
+            using(SqlConnection conn = new SqlConnection(Helper.Common.connString))
+            {
+                string query = @"Delete FROM [table1] WHERE [menuName] = @menuName ";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@menuName", menuName);
+                cmd.ExecuteNonQuery();
+
             }
         }
     }

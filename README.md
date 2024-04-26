@@ -353,6 +353,14 @@ https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/d0dfead3-fd58
 - ModernUI 앱
 
 ## 개인 포트폴리오
+- 메뉴 랜덤 생성기
+    - 폼 디자인
+    - DB 생성
+        
+
+
+
+
 - 심플 메모장 앱
     - 기능
     - 특징

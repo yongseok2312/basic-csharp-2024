@@ -25,17 +25,19 @@ namespace OhShot_Pos
         }
 
         #region '로딩바' 프로그레스바 컨트롤 
-        private void InitProgressBar()
+        private async void InitProgressBar()
         {
+            
             PrgLoading.Style = ProgressBarStyle.Continuous;
             PrgLoading.Minimum = min;
             PrgLoading.Maximum = max;
             PrgLoading.Value = value;
-            StepUpAsync();
+            await StepUpAsync();
         }
 
         // 천천히 로딩바 차오르도록 설정 
         private async Task StepUpAsync()
+
         {
             for (int i = 0; i <= max; i++)
             {
@@ -44,9 +46,11 @@ namespace OhShot_Pos
 
                 if (i == max)
                 {
+                   
                     Close();// 프로그레스바가 최대 값에 도달하면 폼을 닫기
                 }
             }
+          
         }
         #endregion
     }

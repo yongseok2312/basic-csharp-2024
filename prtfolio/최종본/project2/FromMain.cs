@@ -73,12 +73,14 @@ namespace project2
 
         private void ChkKorean_CheckedChanged(object sender, EventArgs e)
         {
+            RefreshData();
             FilterMenu();
             modify();
             price(p);
         }
         private void ChkChina_CheckedChanged(object sender, EventArgs e)
         {
+            RefreshData();
             FilterMenu();
             modify();
             price(p);
@@ -86,12 +88,14 @@ namespace project2
 
         private void ChkWestern_CheckedChanged(object sender, EventArgs e)
         {
+            RefreshData();
             FilterMenu();
             modify();
             price(p);
         }
         private void ChkJapan_CheckedChanged(object sender, EventArgs e)
         {
+            RefreshData();
             FilterMenu();
             modify();
             price(p);
@@ -128,6 +132,7 @@ namespace project2
         #region "밥,면"
         private void Rbtnrice_Click(object sender, EventArgs e)
         {
+            RefreshData();
             FilterMenu();
             modify();
             price(p);
@@ -135,6 +140,7 @@ namespace project2
 
         private void RbtnNuddle_Click(object sender, EventArgs e)
         {
+            RefreshData();
             FilterMenu();
             modify();
             price(p);
@@ -142,6 +148,7 @@ namespace project2
 
         private void Rbtnnomal_Click(object sender, EventArgs e)
         {
+            RefreshData();
             FilterMenu();
             modify();
             price(p);
@@ -156,37 +163,26 @@ namespace project2
 
             try
             {
-                
-                using (SqlConnection conn = new SqlConnection(connString))
+                if (DgvResult.DataSource is DataTable dt)
                 {
-                    conn.Open();
-
-                    string query = "SELECT [메뉴 번호], 메뉴이름, 종류, [밥,면], 가격 FROM menu";
-                    SqlCommand command = new SqlCommand(query, conn);
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-                    
-                    DataSet ds = new DataSet();
-                    adapter.Fill(ds, "menu");
-
-                    DataView dv = ds.Tables["menu"].DefaultView;
+                    DataView dv = dt.DefaultView;
                     string filterExpression = "";
-
 
                     if (showKorean && showJapanese && showChina && showWestern)
                     {
-                        filterExpression = "종류 IN ('한식','일식','중식','양식')";
+                        filterExpression = "종류 IN ('한식', '일식', '중식', '양식')";
                     }
                     else if (showKorean && showJapanese && showChina)
                     {
-                        filterExpression = "종류 IN ('한식','일식','중식')";
+                        filterExpression = "종류 IN ('한식', '일식', '중식')";
                     }
                     else if (showKorean && showJapanese && showWestern)
                     {
-                        filterExpression = "종류 IN ('한식','일식','양식')";
+                        filterExpression = "종류 IN ('한식', '일식', '양식')";
                     }
                     else if (showJapanese && showChina && showWestern)
                     {
-                        filterExpression = "종류 IN ('일식','중식','양식')";
+                        filterExpression = "종류 IN ('일식', '중식', '양식')";
                     }
                     else if (showKorean && showJapanese)
                     {
@@ -194,25 +190,23 @@ namespace project2
                     }
                     else if (showJapanese && showChina)
                     {
-                        filterExpression = "종류 IN ('일식','중식')";
+                        filterExpression = "종류 IN ('일식', '중식')";
                     }
                     else if (showChina && showWestern)
                     {
-                        filterExpression = "종류 IN ('중식','양식')";
+                        filterExpression = "종류 IN ('중식', '양식')";
                     }
                     else if (showJapanese && showWestern)
                     {
-                        filterExpression = "종류 IN('일식','양식')";
-
+                        filterExpression = "종류 IN ('일식', '양식')";
                     }
                     else if (showKorean && showChina)
                     {
-                        filterExpression = "종류 IN('한식','중식')";
-
+                        filterExpression = "종류 IN ('한식', '중식')";
                     }
                     else if (showKorean && showWestern)
                     {
-                        filterExpression = "종류 IN ('한식','양식')";
+                        filterExpression = "종류 IN ('한식', '양식')";
                     }
                     else if (showKorean)
                     {
@@ -230,8 +224,8 @@ namespace project2
                     {
                         filterExpression = "종류 = '양식'";
                     }
-                    dv.RowFilter = filterExpression;
 
+                    dv.RowFilter = filterExpression;
                     DgvResult.DataSource = dv.ToTable();
                 }
             }
@@ -280,8 +274,6 @@ namespace project2
 
                 metroTextBox1.Text = ("오늘의 음식은: "+menuName +Environment.NewLine+"예상 가격은 :" + menuPrice+"원");
                
-
-
             }
             else
             {
@@ -296,6 +288,7 @@ namespace project2
             p = PriceBar.Value;
             TxtPrice.Text = p.ToString();
             price(p);
+            
         }// 스크롤 바
 
         

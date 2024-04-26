@@ -40,11 +40,11 @@
             this.CancelBtn = new System.Windows.Forms.Button();
             this.AllCancelBtn = new System.Windows.Forms.Button();
             this.MenuTablePanel = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BtnNuddle = new System.Windows.Forms.Button();
-            this.BtnSalmonRice = new System.Windows.Forms.Button();
-            this.Btncoffee = new System.Windows.Forms.Button();
             this.BtnEggRice = new System.Windows.Forms.Button();
+            this.Btncoffee = new System.Windows.Forms.Button();
+            this.BtnSalmonRice = new System.Windows.Forms.Button();
+            this.BtnNuddle = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.MenuTablePanel.SuspendLayout();
@@ -158,34 +158,15 @@
             this.MenuTablePanel.Size = new System.Drawing.Size(558, 428);
             this.MenuTablePanel.TabIndex = 4;
             // 
-            // dataGridView1
+            // BtnEggRice
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 125);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(654, 336);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // BtnNuddle
-            // 
-            this.BtnNuddle.Location = new System.Drawing.Point(28, 18);
-            this.BtnNuddle.Name = "BtnNuddle";
-            this.BtnNuddle.Size = new System.Drawing.Size(80, 29);
-            this.BtnNuddle.TabIndex = 0;
-            this.BtnNuddle.Text = "라면";
-            this.BtnNuddle.UseVisualStyleBackColor = true;
-            this.BtnNuddle.Click += new System.EventHandler(this.BtnNuddle_Click);
-            // 
-            // BtnSalmonRice
-            // 
-            this.BtnSalmonRice.Location = new System.Drawing.Point(28, 53);
-            this.BtnSalmonRice.Name = "BtnSalmonRice";
-            this.BtnSalmonRice.Size = new System.Drawing.Size(80, 29);
-            this.BtnSalmonRice.TabIndex = 0;
-            this.BtnSalmonRice.Text = "연어덮밥";
-            this.BtnSalmonRice.UseVisualStyleBackColor = true;
-            this.BtnSalmonRice.Click += new System.EventHandler(this.BtnSalmonRice_Click);
+            this.BtnEggRice.Location = new System.Drawing.Point(28, 123);
+            this.BtnEggRice.Name = "BtnEggRice";
+            this.BtnEggRice.Size = new System.Drawing.Size(80, 29);
+            this.BtnEggRice.TabIndex = 0;
+            this.BtnEggRice.Text = "계란볶음밥";
+            this.BtnEggRice.UseVisualStyleBackColor = true;
+            this.BtnEggRice.Click += new System.EventHandler(this.BtnEggRice_Click);
             // 
             // Btncoffee
             // 
@@ -197,15 +178,35 @@
             this.Btncoffee.UseVisualStyleBackColor = true;
             this.Btncoffee.Click += new System.EventHandler(this.Btncoffee_Click);
             // 
-            // BtnEggRice
+            // BtnSalmonRice
             // 
-            this.BtnEggRice.Location = new System.Drawing.Point(28, 123);
-            this.BtnEggRice.Name = "BtnEggRice";
-            this.BtnEggRice.Size = new System.Drawing.Size(80, 29);
-            this.BtnEggRice.TabIndex = 0;
-            this.BtnEggRice.Text = "계란볶음밥";
-            this.BtnEggRice.UseVisualStyleBackColor = true;
-            this.BtnEggRice.Click += new System.EventHandler(this.BtnEggRice_Click);
+            this.BtnSalmonRice.Location = new System.Drawing.Point(28, 53);
+            this.BtnSalmonRice.Name = "BtnSalmonRice";
+            this.BtnSalmonRice.Size = new System.Drawing.Size(80, 29);
+            this.BtnSalmonRice.TabIndex = 0;
+            this.BtnSalmonRice.Text = "연어덮밥";
+            this.BtnSalmonRice.UseVisualStyleBackColor = true;
+            this.BtnSalmonRice.Click += new System.EventHandler(this.BtnSalmonRice_Click);
+            // 
+            // BtnNuddle
+            // 
+            this.BtnNuddle.Location = new System.Drawing.Point(28, 18);
+            this.BtnNuddle.Name = "BtnNuddle";
+            this.BtnNuddle.Size = new System.Drawing.Size(80, 29);
+            this.BtnNuddle.TabIndex = 0;
+            this.BtnNuddle.Text = "라면";
+            this.BtnNuddle.UseVisualStyleBackColor = true;
+            this.BtnNuddle.Click += new System.EventHandler(this.BtnNuddle_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(30, 125);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(654, 336);
+            this.dataGridView1.TabIndex = 5;
             // 
             // panel1
             // 
