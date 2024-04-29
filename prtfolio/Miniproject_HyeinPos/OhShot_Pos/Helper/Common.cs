@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OhShot_Pos.Helper
 {
@@ -13,5 +16,6 @@ namespace OhShot_Pos.Helper
                                            "Persist Security Info=True;" +
                                            "User ID=sa;Encrypt=False;" +
                                            "Password=mssql_p@ss";
+
     }
 }

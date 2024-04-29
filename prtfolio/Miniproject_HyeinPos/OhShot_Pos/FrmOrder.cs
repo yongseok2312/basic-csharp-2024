@@ -15,7 +15,7 @@ namespace OhShot_Pos
 {
     public partial class FrmOrder : Form
     {
-        
+        string menuName = string.Empty;
         public FrmOrder()
         {
             InitializeComponent();
@@ -79,7 +79,8 @@ namespace OhShot_Pos
         #region '주문하기' 버튼 클릭 이벤트 핸들러 
         private void OrderBtn_Click(object sender, EventArgs e)
         {
-
+            this.Dispose();
+            
         }
         #endregion
 
@@ -237,7 +238,7 @@ namespace OhShot_Pos
         private int sumprice(SqlConnection conn)
         {
             int totalMenuPrice = 0;
-            string query = @"SELECT SUM([menuPrice]) AS TotalMenuPrice FROM table1";
+            string query = @"SELECT SUM([menuPrice]*[menunum]) AS TotalMenuPrice FROM table1";
             SqlCommand cmd = new SqlCommand(query, conn);
             object result = cmd.ExecuteScalar();
             if (result != null && int.TryParse(result.ToString(), out totalMenuPrice))
@@ -278,11 +279,44 @@ namespace OhShot_Pos
         {
             using(SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
+                conn.Open();
                 string query = @"Delete FROM [table1] WHERE [menuName] = @menuName ";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@menuName", menuName);
                 cmd.ExecuteNonQuery();
 
+            }
+        }
+
+        private void MinuNum(string menuName)
+        {
+            using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
+            {
+                conn.Open();
+                string query = "UPDATE [table1] SET [menunum] = [menunum] - 1 WHERE [menuName] = @menuName";
+
+                // SqlCommand 객체 생성 시 SqlConnection 객체 전달
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@menuName", menuName);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        private void Btnminusnum_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+                string menuName = selectedRow.Cells["menuName"].Value.ToString(); // 메뉴 이름 가져오기
+                string menuNum = selectedRow.Cells["menunum"].Value.ToString(); // 메뉴 이름 가져오기
+                MinuNum(menuName);
+                if(menuNum == "1") { DeleteMenu(menuName);}
+                RefreshData();
+            }
+            else
+            {
+                MessageBox.Show("삭제할 품목을 선택해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

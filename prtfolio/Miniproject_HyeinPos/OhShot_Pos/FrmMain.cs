@@ -31,12 +31,14 @@ namespace OhShot_Pos
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.TopMost = true;  // 윈도우 화면 상단에 
             frm.ShowDialog();
-            
+            this.Refresh();
+            Showtable1();
+                        
             
         }
         #endregion
 
-        /*private void Showtable1()
+        private void Showtable1()
         {
             using (SqlConnection conn = new SqlConnection(Helper.Common.connString))
             {
@@ -52,14 +54,20 @@ namespace OhShot_Pos
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     adapter.Fill(ds, "table1");
-                    dataGridView1.DataSource = ds.Tables["table1"];
-                    dataGridView1.Columns[0].HeaderText = "메뉴";
-                    dataGridView1.Columns[1].HeaderText = "가격";
-                    dataGridView1.Columns[2].HeaderText = "수량";
+                    DataTable dt = ds.Tables["table1"];
 
+                    StringBuilder sb = new StringBuilder();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        string menuName = row["menuName"].ToString();
+                        string menunum = row["menunum"].ToString();
 
-                    decimal totalMenuPrice = sumprice(conn);
-                    totalPrice.Text = totalMenuPrice.ToString("C");
+                        // 텍스트 상자에 추가
+                        sb.AppendLine($"{menuName} * {menunum}");
+
+                    }
+
+                    TxtTable1.Text = sb.ToString();
 
                 }
                 catch (Exception ex)
@@ -67,7 +75,8 @@ namespace OhShot_Pos
                     MessageBox.Show($"데이터 가져오기 오류: {ex.Message}");
                 }
             }
-        }*/
+        }
+
         #region '매출통계' 버튼 클릭 이벤트 핸들러 
         private void BtnStat_Click(object sender, EventArgs e)
         {
@@ -89,7 +98,8 @@ namespace OhShot_Pos
         {
             FrmOrder frm = new FrmOrder(); 
             frm.StartPosition = FormStartPosition.CenterScreen; 
-            frm.Show(); 
+            frm.ShowDialog(); 
+            
         }
         #endregion
     }

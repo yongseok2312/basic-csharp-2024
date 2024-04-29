@@ -37,7 +37,6 @@
             this.AllViewBtn = new System.Windows.Forms.Button();
             this.OrderBtn = new System.Windows.Forms.Button();
             this.MinusBtn = new System.Windows.Forms.Button();
-            this.CancelBtn = new System.Windows.Forms.Button();
             this.AllCancelBtn = new System.Windows.Forms.Button();
             this.MenuTablePanel = new System.Windows.Forms.Panel();
             this.BtnEggRice = new System.Windows.Forms.Button();
@@ -47,13 +46,14 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.Btnminusnum = new System.Windows.Forms.Button();
             this.MenuTablePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // backBtn
             // 
-            this.backBtn.Location = new System.Drawing.Point(30, 27);
+            this.backBtn.Location = new System.Drawing.Point(28, 22);
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(265, 92);
             this.backBtn.TabIndex = 0;
@@ -64,7 +64,7 @@
             // tableNum
             // 
             this.tableNum.AutoSize = true;
-            this.tableNum.Location = new System.Drawing.Point(356, 63);
+            this.tableNum.Location = new System.Drawing.Point(354, 58);
             this.tableNum.Name = "tableNum";
             this.tableNum.Size = new System.Drawing.Size(73, 16);
             this.tableNum.TabIndex = 1;
@@ -73,7 +73,7 @@
             // nowDateTIme
             // 
             this.nowDateTIme.AutoSize = true;
-            this.nowDateTIme.Location = new System.Drawing.Point(556, 63);
+            this.nowDateTIme.Location = new System.Drawing.Point(554, 58);
             this.nowDateTIme.Name = "nowDateTIme";
             this.nowDateTIme.Size = new System.Drawing.Size(102, 16);
             this.nowDateTIme.TabIndex = 1;
@@ -82,7 +82,7 @@
             // totalPrice
             // 
             this.totalPrice.AutoSize = true;
-            this.totalPrice.Location = new System.Drawing.Point(530, 563);
+            this.totalPrice.Location = new System.Drawing.Point(571, 502);
             this.totalPrice.Name = "totalPrice";
             this.totalPrice.Size = new System.Drawing.Size(73, 16);
             this.totalPrice.TabIndex = 1;
@@ -90,9 +90,9 @@
             // 
             // PaymentBtn
             // 
-            this.PaymentBtn.Location = new System.Drawing.Point(993, 27);
+            this.PaymentBtn.Location = new System.Drawing.Point(785, 22);
             this.PaymentBtn.Name = "PaymentBtn";
-            this.PaymentBtn.Size = new System.Drawing.Size(265, 92);
+            this.PaymentBtn.Size = new System.Drawing.Size(265, 77);
             this.PaymentBtn.TabIndex = 0;
             this.PaymentBtn.Text = "결제";
             this.PaymentBtn.UseVisualStyleBackColor = true;
@@ -100,18 +100,18 @@
             // 
             // AllViewBtn
             // 
-            this.AllViewBtn.Location = new System.Drawing.Point(699, 125);
+            this.AllViewBtn.Location = new System.Drawing.Point(697, 120);
             this.AllViewBtn.Name = "AllViewBtn";
-            this.AllViewBtn.Size = new System.Drawing.Size(559, 67);
+            this.AllViewBtn.Size = new System.Drawing.Size(353, 67);
             this.AllViewBtn.TabIndex = 0;
             this.AllViewBtn.Text = "전체보기";
             this.AllViewBtn.UseVisualStyleBackColor = true;
             // 
             // OrderBtn
             // 
-            this.OrderBtn.Location = new System.Drawing.Point(30, 479);
+            this.OrderBtn.Location = new System.Drawing.Point(28, 470);
             this.OrderBtn.Name = "OrderBtn";
-            this.OrderBtn.Size = new System.Drawing.Size(204, 64);
+            this.OrderBtn.Size = new System.Drawing.Size(168, 88);
             this.OrderBtn.TabIndex = 0;
             this.OrderBtn.Text = "주문하기";
             this.OrderBtn.UseVisualStyleBackColor = true;
@@ -119,29 +119,19 @@
             // 
             // MinusBtn
             // 
-            this.MinusBtn.Location = new System.Drawing.Point(260, 479);
+            this.MinusBtn.Location = new System.Drawing.Point(228, 517);
             this.MinusBtn.Name = "MinusBtn";
-            this.MinusBtn.Size = new System.Drawing.Size(204, 64);
+            this.MinusBtn.Size = new System.Drawing.Size(152, 41);
             this.MinusBtn.TabIndex = 0;
             this.MinusBtn.Text = "품목제거";
             this.MinusBtn.UseVisualStyleBackColor = true;
             this.MinusBtn.Click += new System.EventHandler(this.MinusBtn_Click);
             // 
-            // CancelBtn
-            // 
-            this.CancelBtn.Location = new System.Drawing.Point(30, 567);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(204, 64);
-            this.CancelBtn.TabIndex = 0;
-            this.CancelBtn.Text = "단품취소";
-            this.CancelBtn.UseVisualStyleBackColor = true;
-            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
-            // 
             // AllCancelBtn
             // 
-            this.AllCancelBtn.Location = new System.Drawing.Point(260, 567);
+            this.AllCancelBtn.Location = new System.Drawing.Point(412, 470);
             this.AllCancelBtn.Name = "AllCancelBtn";
-            this.AllCancelBtn.Size = new System.Drawing.Size(204, 64);
+            this.AllCancelBtn.Size = new System.Drawing.Size(126, 90);
             this.AllCancelBtn.TabIndex = 0;
             this.AllCancelBtn.Text = "전체취소";
             this.AllCancelBtn.UseVisualStyleBackColor = true;
@@ -153,9 +143,9 @@
             this.MenuTablePanel.Controls.Add(this.Btncoffee);
             this.MenuTablePanel.Controls.Add(this.BtnSalmonRice);
             this.MenuTablePanel.Controls.Add(this.BtnNuddle);
-            this.MenuTablePanel.Location = new System.Drawing.Point(699, 203);
+            this.MenuTablePanel.Location = new System.Drawing.Point(697, 198);
             this.MenuTablePanel.Name = "MenuTablePanel";
-            this.MenuTablePanel.Size = new System.Drawing.Size(558, 428);
+            this.MenuTablePanel.Size = new System.Drawing.Size(353, 357);
             this.MenuTablePanel.TabIndex = 4;
             // 
             // BtnEggRice
@@ -200,18 +190,20 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 125);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 120);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(654, 336);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(654, 339);
             this.dataGridView1.TabIndex = 5;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Location = new System.Drawing.Point(514, 585);
+            this.panel1.Location = new System.Drawing.Point(555, 524);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(100, 1);
             this.panel1.TabIndex = 6;
@@ -220,17 +212,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(613, 561);
+            this.label1.Location = new System.Drawing.Point(654, 500);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 25);
             this.label1.TabIndex = 7;
             this.label1.Text = "원";
             // 
+            // Btnminusnum
+            // 
+            this.Btnminusnum.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Btnminusnum.Location = new System.Drawing.Point(228, 470);
+            this.Btnminusnum.Name = "Btnminusnum";
+            this.Btnminusnum.Size = new System.Drawing.Size(152, 41);
+            this.Btnminusnum.TabIndex = 0;
+            this.Btnminusnum.Text = "수량감소";
+            this.Btnminusnum.UseVisualStyleBackColor = true;
+            this.Btnminusnum.Click += new System.EventHandler(this.Btnminusnum_Click);
+            // 
             // FrmOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1283, 665);
+            this.ClientSize = new System.Drawing.Size(1090, 572);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
@@ -241,7 +244,7 @@
             this.Controls.Add(this.AllViewBtn);
             this.Controls.Add(this.PaymentBtn);
             this.Controls.Add(this.AllCancelBtn);
-            this.Controls.Add(this.CancelBtn);
+            this.Controls.Add(this.Btnminusnum);
             this.Controls.Add(this.MinusBtn);
             this.Controls.Add(this.OrderBtn);
             this.Controls.Add(this.backBtn);
@@ -268,7 +271,6 @@
         private System.Windows.Forms.Button AllViewBtn;
         private System.Windows.Forms.Button OrderBtn;
         private System.Windows.Forms.Button MinusBtn;
-        private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Button AllCancelBtn;
         private System.Windows.Forms.Panel MenuTablePanel;
         private System.Windows.Forms.Button BtnEggRice;
@@ -278,5 +280,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Btnminusnum;
     }
 }
