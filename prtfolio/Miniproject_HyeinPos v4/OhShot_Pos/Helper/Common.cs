@@ -16,6 +16,8 @@ namespace OhShot_Pos.Helper
                                            "Persist Security Info=True;" +
                                            "User ID=sa;Encrypt=False;" +
                                            "Password=mssql_p@ss";
+        
 
     }
+
 }

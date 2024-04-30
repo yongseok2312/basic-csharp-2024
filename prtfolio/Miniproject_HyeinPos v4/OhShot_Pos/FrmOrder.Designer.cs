@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOrder));
             this.backBtn = new System.Windows.Forms.Button();
             this.tableNum = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Btnminusnum = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MenuTablePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +61,7 @@
             this.backBtn.TabIndex = 0;
             this.backBtn.Text = "메인으로 돌아가기";
             this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            this.backBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // tableNum
             // 
@@ -229,6 +231,10 @@
             this.Btnminusnum.UseVisualStyleBackColor = true;
             this.Btnminusnum.Click += new System.EventHandler(this.Btnminusnum_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -281,5 +287,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btnminusnum;
+        private System.Windows.Forms.Timer timer1;
     }
 }

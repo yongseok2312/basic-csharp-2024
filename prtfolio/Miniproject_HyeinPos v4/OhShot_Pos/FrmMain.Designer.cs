@@ -52,7 +52,8 @@
             this.BtnStat = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.TxtDate = new System.Windows.Forms.TextBox();
+            this.Datelabel = new System.Windows.Forms.Label();
+            this.Btnrecord = new System.Windows.Forms.Button();
             this.TblPanel.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -116,6 +117,7 @@
             this.TxtTable6.Size = new System.Drawing.Size(518, 193);
             this.TxtTable6.TabIndex = 4;
             this.TxtTable6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtTable6.Click += new System.EventHandler(this.TxtTable6_Click);
             // 
             // panel5
             // 
@@ -151,6 +153,7 @@
             this.TxtTable5.Size = new System.Drawing.Size(518, 193);
             this.TxtTable5.TabIndex = 4;
             this.TxtTable5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtTable5.Click += new System.EventHandler(this.TxtTable5_Click);
             // 
             // panel4
             // 
@@ -186,6 +189,7 @@
             this.TxtTable4.Size = new System.Drawing.Size(518, 193);
             this.TxtTable4.TabIndex = 4;
             this.TxtTable4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtTable4.Click += new System.EventHandler(this.TxtTable4_Click);
             // 
             // panel3
             // 
@@ -221,6 +225,7 @@
             this.TxtTable3.Size = new System.Drawing.Size(518, 193);
             this.TxtTable3.TabIndex = 4;
             this.TxtTable3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtTable3.Click += new System.EventHandler(this.TxtTable3_Click);
             // 
             // panel2
             // 
@@ -256,6 +261,7 @@
             this.TxtTable2.Size = new System.Drawing.Size(518, 193);
             this.TxtTable2.TabIndex = 4;
             this.TxtTable2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtTable2.Click += new System.EventHandler(this.TxtTable2_Click);
             // 
             // panel1
             // 
@@ -313,17 +319,28 @@
             this.BtnExit.UseVisualStyleBackColor = true;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // TxtDate
+            // timer1
             // 
-            this.TxtDate.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.TxtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDate.Font = new System.Drawing.Font("굴림", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.TxtDate.Location = new System.Drawing.Point(1089, 93);
-            this.TxtDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtDate.Multiline = true;
-            this.TxtDate.Name = "TxtDate";
-            this.TxtDate.Size = new System.Drawing.Size(224, 121);
-            this.TxtDate.TabIndex = 3;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // Datelabel
+            // 
+            this.Datelabel.AutoSize = true;
+            this.Datelabel.Location = new System.Drawing.Point(1186, 79);
+            this.Datelabel.Name = "Datelabel";
+            this.Datelabel.Size = new System.Drawing.Size(38, 12);
+            this.Datelabel.TabIndex = 3;
+            this.Datelabel.Text = "label1";
+            // 
+            // Btnrecord
+            // 
+            this.Btnrecord.Location = new System.Drawing.Point(1089, 477);
+            this.Btnrecord.Name = "Btnrecord";
+            this.Btnrecord.Size = new System.Drawing.Size(283, 78);
+            this.Btnrecord.TabIndex = 2;
+            this.Btnrecord.Text = "기록";
+            this.Btnrecord.UseVisualStyleBackColor = true;
+            this.Btnrecord.Click += new System.EventHandler(this.Btnrecord_Click);
             // 
             // FrmMain
             // 
@@ -331,13 +348,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1384, 761);
-            this.Controls.Add(this.TxtDate);
+            this.Controls.Add(this.Datelabel);
             this.Controls.Add(this.BtnExit);
+            this.Controls.Add(this.Btnrecord);
             this.Controls.Add(this.BtnStat);
             this.Controls.Add(this.TblPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMain";
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.FrmMain_Activated);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.TblPanel.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -381,7 +400,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Table2;
         private System.Windows.Forms.TextBox TxtTable2;
-        private System.Windows.Forms.TextBox TxtDate;
+        private System.Windows.Forms.Label Datelabel;
+        private System.Windows.Forms.Button Btnrecord;
     }
 }
 

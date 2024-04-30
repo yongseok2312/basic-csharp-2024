@@ -59,7 +59,7 @@
             this.backBtn.TabIndex = 0;
             this.backBtn.Text = "메인으로 돌아가기";
             this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            this.backBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // tableNum
             // 
