@@ -346,7 +346,9 @@ namespace OhShot_Pos
 
         private void Btnrecord_Click(object sender, EventArgs e)
         {
-
+            FrmRecord frm = new FrmRecord();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
         }
     }
 }

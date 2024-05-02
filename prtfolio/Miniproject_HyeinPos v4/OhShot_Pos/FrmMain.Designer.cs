@@ -326,11 +326,12 @@
             // Datelabel
             // 
             this.Datelabel.AutoSize = true;
-            this.Datelabel.Location = new System.Drawing.Point(1186, 79);
+            this.Datelabel.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Datelabel.Location = new System.Drawing.Point(1108, 82);
             this.Datelabel.Name = "Datelabel";
-            this.Datelabel.Size = new System.Drawing.Size(38, 12);
+            this.Datelabel.Size = new System.Drawing.Size(91, 32);
             this.Datelabel.TabIndex = 3;
-            this.Datelabel.Text = "label1";
+            this.Datelabel.Text = "Time";
             // 
             // Btnrecord
             // 
@@ -338,7 +339,7 @@
             this.Btnrecord.Name = "Btnrecord";
             this.Btnrecord.Size = new System.Drawing.Size(283, 78);
             this.Btnrecord.TabIndex = 2;
-            this.Btnrecord.Text = "기록";
+            this.Btnrecord.Text = "결제 기록";
             this.Btnrecord.UseVisualStyleBackColor = true;
             this.Btnrecord.Click += new System.EventHandler(this.Btnrecord_Click);
             // 
