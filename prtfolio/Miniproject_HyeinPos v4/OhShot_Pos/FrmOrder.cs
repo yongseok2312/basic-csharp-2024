@@ -326,5 +326,7 @@ namespace OhShot_Pos
         {
             nowDateTIme.Text = DateTime.Now.ToString("T");
         }
+
+        
     }
 }

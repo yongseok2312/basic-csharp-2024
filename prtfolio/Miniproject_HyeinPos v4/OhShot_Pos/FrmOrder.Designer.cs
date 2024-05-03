@@ -35,11 +35,9 @@
             this.nowDateTIme = new System.Windows.Forms.Label();
             this.totalPrice = new System.Windows.Forms.Label();
             this.PaymentBtn = new System.Windows.Forms.Button();
-            this.AllViewBtn = new System.Windows.Forms.Button();
             this.OrderBtn = new System.Windows.Forms.Button();
             this.MinusBtn = new System.Windows.Forms.Button();
             this.AllCancelBtn = new System.Windows.Forms.Button();
-            this.MenuTablePanel = new System.Windows.Forms.Panel();
             this.BtnEggRice = new System.Windows.Forms.Button();
             this.Btncoffee = new System.Windows.Forms.Button();
             this.BtnSalmonRice = new System.Windows.Forms.Button();
@@ -49,8 +47,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Btnminusnum = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.MenuTablePanel.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // backBtn
@@ -100,15 +109,6 @@
             this.PaymentBtn.UseVisualStyleBackColor = true;
             this.PaymentBtn.Click += new System.EventHandler(this.PaymentBtn_Click);
             // 
-            // AllViewBtn
-            // 
-            this.AllViewBtn.Location = new System.Drawing.Point(697, 120);
-            this.AllViewBtn.Name = "AllViewBtn";
-            this.AllViewBtn.Size = new System.Drawing.Size(353, 67);
-            this.AllViewBtn.TabIndex = 0;
-            this.AllViewBtn.Text = "전체보기";
-            this.AllViewBtn.UseVisualStyleBackColor = true;
-            // 
             // OrderBtn
             // 
             this.OrderBtn.Location = new System.Drawing.Point(28, 470);
@@ -139,20 +139,9 @@
             this.AllCancelBtn.UseVisualStyleBackColor = true;
             this.AllCancelBtn.Click += new System.EventHandler(this.AllCancelBtn_Click);
             // 
-            // MenuTablePanel
-            // 
-            this.MenuTablePanel.Controls.Add(this.BtnEggRice);
-            this.MenuTablePanel.Controls.Add(this.Btncoffee);
-            this.MenuTablePanel.Controls.Add(this.BtnSalmonRice);
-            this.MenuTablePanel.Controls.Add(this.BtnNuddle);
-            this.MenuTablePanel.Location = new System.Drawing.Point(697, 198);
-            this.MenuTablePanel.Name = "MenuTablePanel";
-            this.MenuTablePanel.Size = new System.Drawing.Size(353, 357);
-            this.MenuTablePanel.TabIndex = 4;
-            // 
             // BtnEggRice
             // 
-            this.BtnEggRice.Location = new System.Drawing.Point(28, 123);
+            this.BtnEggRice.Location = new System.Drawing.Point(21, 20);
             this.BtnEggRice.Name = "BtnEggRice";
             this.BtnEggRice.Size = new System.Drawing.Size(80, 29);
             this.BtnEggRice.TabIndex = 0;
@@ -162,7 +151,7 @@
             // 
             // Btncoffee
             // 
-            this.Btncoffee.Location = new System.Drawing.Point(28, 88);
+            this.Btncoffee.Location = new System.Drawing.Point(21, 69);
             this.Btncoffee.Name = "Btncoffee";
             this.Btncoffee.Size = new System.Drawing.Size(80, 29);
             this.Btncoffee.TabIndex = 0;
@@ -172,7 +161,7 @@
             // 
             // BtnSalmonRice
             // 
-            this.BtnSalmonRice.Location = new System.Drawing.Point(28, 53);
+            this.BtnSalmonRice.Location = new System.Drawing.Point(240, 20);
             this.BtnSalmonRice.Name = "BtnSalmonRice";
             this.BtnSalmonRice.Size = new System.Drawing.Size(80, 29);
             this.BtnSalmonRice.TabIndex = 0;
@@ -182,7 +171,7 @@
             // 
             // BtnNuddle
             // 
-            this.BtnNuddle.Location = new System.Drawing.Point(28, 18);
+            this.BtnNuddle.Location = new System.Drawing.Point(132, 20);
             this.BtnNuddle.Name = "BtnNuddle";
             this.BtnNuddle.Size = new System.Drawing.Size(80, 29);
             this.BtnNuddle.TabIndex = 0;
@@ -235,19 +224,106 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(697, 120);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(353, 438);
+            this.tabControl1.TabIndex = 8;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.BtnEggRice);
+            this.tabPage1.Controls.Add(this.BtnNuddle);
+            this.tabPage1.Controls.Add(this.Btncoffee);
+            this.tabPage1.Controls.Add(this.BtnSalmonRice);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(345, 409);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "전체";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(345, 409);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "밥";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(345, 409);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "후식";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(32, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 29);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "계란볶음밥";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BtnEggRice_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(246, 33);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(80, 29);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "라면";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.BtnNuddle_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(25, 34);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(80, 29);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "커피";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Btncoffee_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(137, 33);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(80, 29);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "연어덮밥";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.BtnSalmonRice_Click);
+            // 
             // FrmOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 572);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.MenuTablePanel);
             this.Controls.Add(this.totalPrice);
             this.Controls.Add(this.nowDateTIme);
             this.Controls.Add(this.tableNum);
-            this.Controls.Add(this.AllViewBtn);
             this.Controls.Add(this.PaymentBtn);
             this.Controls.Add(this.AllCancelBtn);
             this.Controls.Add(this.Btnminusnum);
@@ -259,9 +335,13 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmOrder";
             this.Text = "Form1";
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmOrder_FormClosing);
             this.Load += new System.EventHandler(this.FrmOrder_Load);
-            this.MenuTablePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,11 +354,9 @@
         private System.Windows.Forms.Label nowDateTIme;
         private System.Windows.Forms.Label totalPrice;
         private System.Windows.Forms.Button PaymentBtn;
-        private System.Windows.Forms.Button AllViewBtn;
         private System.Windows.Forms.Button OrderBtn;
         private System.Windows.Forms.Button MinusBtn;
         private System.Windows.Forms.Button AllCancelBtn;
-        private System.Windows.Forms.Panel MenuTablePanel;
         private System.Windows.Forms.Button BtnEggRice;
         private System.Windows.Forms.Button Btncoffee;
         private System.Windows.Forms.Button BtnSalmonRice;
@@ -288,5 +366,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btnminusnum;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button3;
     }
 }
