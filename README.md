@@ -371,4 +371,8 @@ https://github.com/yongseok2312/basic-csharp-2024/assets/135982451/b8f911ea-820c
     - 테이블 저장
 
 
+https://github.com/user-attachments/assets/bf5eb641-456a-4bca-b361-68969a57b422
+
+
+
 
